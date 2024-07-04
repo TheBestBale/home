@@ -1,28 +1,25 @@
 <template>
-  <div class="app-header">
-    <div>Best Bale App</div>
-  </div>
+  <BBSplash/>
 </template>
 <script>
 
+import BBSplash from "@/views/BBSplash";
+
 export default {
   name: 'App',
-  components: {},
+  components: {BBSplash},
   data() {
-    return {
-    }
+    return {}
   },
   created() {
   },
-  methods: {
-
-  },
-  computed: {
-
-  }
+  methods: {},
+  computed: {}
 }
 </script>
 
 <style lang="scss">
-
+#app, body {
+  margin: 0;
+}
 </style>
