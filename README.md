@@ -1,28 +1,4 @@
-# bestbale.github.io
-
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
-
+# two_minute_heroes
 
 ## To Deploy
 
@@ -38,50 +14,30 @@ Windows IntelliJ Terminal
 rm -r dist ; vue-cli-service build ; git add dist ; git commit -am "Dist Release" ; git subtree split --prefix dist -b gh-pages ; git push -f origin gh-pages:gh-pages ; git branch -D gh-pages
 ```
 
-[//]: # ()
-[//]: # (## Project setup)
+## Project setup
 
-[//]: # ()
-[//]: # (```)
+```
+yarn install
+```
 
-[//]: # (yarn install)
+### Compiles and hot-reloads for development
 
-[//]: # (```)
+```
+yarn serve
+```
 
-[//]: # ()
-[//]: # (### Compiles and hot-reloads for development)
+### Compiles and minifies for production
 
-[//]: # ()
-[//]: # (```)
+```
+yarn build
+```
 
-[//]: # (yarn serve)
+### Lints and fixes files
 
-[//]: # (```)
+```
+yarn lint
+```
 
-[//]: # ()
-[//]: # (### Compiles and minifies for production)
+### Customize configuration
 
-[//]: # ()
-[//]: # (```)
-
-[//]: # (yarn build)
-
-[//]: # (```)
-
-[//]: # ()
-[//]: # (### Lints and fixes files)
-
-[//]: # ()
-[//]: # (```)
-
-[//]: # (yarn lint)
-
-[//]: # (```)
-
-[//]: # ()
-[//]: # (### Customize configuration)
-
-[//]: # ()
-[//]: # (See [Configuration Reference]&#40;https://cli.vuejs.org/config/&#41;.)
-
-[//]: # ()
+See [Configuration Reference](https://cli.vuejs.org/config/).
