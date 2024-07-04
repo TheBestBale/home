@@ -3,7 +3,7 @@ const { defineConfig } = require('@vue/cli-service')
 
 module.exports = defineConfig({
   transpileDependencies: true,
-  publicPath: '/home',
+  publicPath: '/bestbale.github.io/',
   css: {
     loaderOptions: {
       sass: {
