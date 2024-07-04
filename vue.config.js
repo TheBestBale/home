@@ -3,6 +3,7 @@ const { defineConfig } = require('@vue/cli-service')
 
 module.exports = defineConfig({
   transpileDependencies: true,
+  publicPath: '/home',
   css: {
     loaderOptions: {
       sass: {
