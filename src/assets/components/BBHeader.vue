@@ -1,8 +1,9 @@
 <template>
   <div class="header">
     <div class="header-title">
-      Best Bale
+      <BestBaleLogo/>
     </div>
+    <div/>
     <div class="header-subtitle">
       Be better. Bale better. Bale Best.
     </div>
@@ -11,22 +12,28 @@
 </template>
 
 <script>
+import BestBaleLogo from "@/assets/components/BestBaleLogo";
+
 export default {
-  name: "BBHeader"
+  name: "BBHeader",
+  components: {BestBaleLogo}
 }
 </script>
 
 <style lang="scss" scoped>
 .header {
-  background-image: url('../images/hay1.jpg');
+  background-image: url('../images/bale_rows.jpg');
   background-size: 100%;
   color: $color-white;
   display: flex;
   padding: 3%;
   justify-content: space-between;
+  height: 40px;
 
   &-title {
     font-size: $font-size-xxlarge;
+    display: flex;
+    justify-content: center;
   }
 
   &-subtitle {
@@ -35,6 +42,8 @@ export default {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    text-align: right;
+    width: 120px;
   }
 }
 </style>
