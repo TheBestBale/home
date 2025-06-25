@@ -7,16 +7,18 @@
     <div class="header-subtitle">
       Be better. Bale better. Bale Best.
     </div>
+    <FirebaseLogin/>
     <!--    <img src="@/assets/images/hay1.jpg">-->
   </div>
 </template>
 
 <script>
 import BestBaleLogo from "@/assets/components/BestBaleLogo";
+import FirebaseLogin from "@/assets/components/FirebaseLogin.vue";
 
 export default {
   name: "BBHeader",
-  components: {BestBaleLogo}
+  components: {FirebaseLogin, BestBaleLogo}
 }
 </script>
 
