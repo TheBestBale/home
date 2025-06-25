@@ -11,6 +11,7 @@
 <script>
 import {auth, provider} from "@/firebase";
 import {onAuthStateChanged, signInWithPopup, signOut} from "firebase/auth";
+import { initializeApp } from 'firebase/app';
 
 export default {
   name: "FirebaseLogin",
@@ -18,6 +19,13 @@ export default {
     return {
       user: null,
     };
+  },
+  created() {
+    const firebaseConfig = {
+      //...
+    };
+
+    const app = initializeApp(firebaseConfig);
   },
   methods: {
     async login() {
