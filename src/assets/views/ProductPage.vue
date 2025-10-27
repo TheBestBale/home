@@ -41,7 +41,7 @@ export default {
     margin: $margin-small;
     padding: $padding-medium;
     text-align: center;
-    box-shadow: $shadow-small;
+    //box-shadow: $shadow-small;
   }
 }
 </style>

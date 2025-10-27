@@ -21,7 +21,10 @@
   <img v-else-if="install3" :alt="alt_text" src="@/assets/images/install3.jpg"/>
   <img v-else-if="install4" :alt="alt_text" src="@/assets/images/install4.jpg"/>
 
-  <img v-else :alt="alt_text" src="@/assets/images/logo.png"/>
+  <img v-else-if="screen1" :alt="alt_text" src="@/assets/images/screen1.png"/>
+  <img v-else-if="screen2" :alt="alt_text" src="@/assets/images/screen2.png"/>
+
+  <img v-else :alt="alt_text" src="@/assets/images/logo-white.webp"/>
 </template>
 
 <script>
@@ -99,12 +102,17 @@ export default {
     install4() {
       return this.image === 'install4';
     },
+    screen1(){
+      return this.image === 'screen1';
+    },
+    screen2(){
+      return this.image === 'screen2';
+    }
   }
 }
 </script>
 
 <style lang="scss" scoped>
-img {
-}
+
 
 </style>

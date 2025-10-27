@@ -15,7 +15,7 @@ export default {
 <style lang="scss" scoped>
 .footer {
   background-position: center;
-  color: $color-white;
+  color: $color-secondary;
   display: flex;
   padding: 1%;
   justify-content: space-between;

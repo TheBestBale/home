@@ -1,20 +1,112 @@
 //BestBale Colors
-$color-black: #131711;
-$color-green: #5C9257;
-$color-white: #ffffff;
-$color-off-white: #AFA696;
-$color-gray-light:#998B7E;
-$color-grey: #8E8179;
-$color-gray-medium: #766960;
+$c-green-1: #02964f;
+$c-green-2: #007935;
+$c-green-3: #005d1c;
+$c-green-4: #004202;
+$c-green-5: #002b00;
+
+// Generic Gradient
+$c-grad-1: #008967;
+$c-grad-2: #007974;
+$c-grad-3: #006975;
+$c-grad-4: #0b586b;
+$c-grad-5: #2f4858;
+
+// Matching Gradient
+$c-grad-6: #00925d;
+$c-grad-7: #008d69;
+$c-grad-8: #008873;
+$c-grad-9: #00837c;
+$c-grad-10: #007d83;
+
+// Spot Palette
+$v: #8dc49b;
+$v: #d4fadd;
+$v: #00c9d4;
+//Twisted Spot Palette
+$a: #00c9d4;
+$a: #bffcfd;
+$a: #458082;
+//Classy
+$b: #3b4a3f;
+$b: #9eb0a2;
+$b: #0094d9;
+$b: #0061a2;
+//Cube
+$b: #68704e;
+$b: #1d1d35;
+//Switch
+$b: #003000;
+$b: #00c9d4;
+$b: #deb887;
+//Small Switch
+$c-white-2: #ecefe0;
+$b: #7a8656;
+//Skip Gradient
+$c-yellow-1: #ffe081;
+$c-yellow-2: #c4a94d;
+$c-yellow-3: #8c7519;
+//Natural
+$b: #6f9b7a;
+$c-white-1: #f1fcf3;
+$b: #deb887;
+//Matching
+$b: #3b4a3f;
+$b: #9eb0a2;
+$b: #009aa2;
+$b: #00656f;
+//Squish
+$c-blue: #3c7cfb;
+$c-orange: #c56b00;
+//Grey Friends
+$b: #3b4a3f;
+$b: #9eb0a2;
+//Dotting
+$b: #9eb0a2;
+$b: #0094d9;
+$c-grey: #99aebb;
+//Skip Shade
+$b: #75b153;
+$b: #bdc963;
+$b: #ffe081;
+//Threedom
+$b: #02964f;
+$b: #008aff;
+$c-red-1: #ea4646;
+//Highlight
+$b: #0bc46a;
+$b: #deb887;
+$b: #1d1d35;
+//Neighbors
+$b: #656d4b;
+$b: #95a26c;
+$b: #d1d5c2;
+//Discreet
+$b: #6f9b7a;
+$c-white-3: #f2fcf4;
+$b: #1d1d35;
+//Dust
+$c-black: #3b4a3f;
+$b: #9eb0a2;
+$b: #0094d9;
+//Pin
+$b: #0bc46a;
+$b: #deb887;
+$b: #00c9d4;
+//Shades
+
 
 //Other
-$color-red: #BE3144;
-$color-red-dark:#982736;
-$color-yellow: #FFA732;
+//$color-red: #BE3144;
+//$color-red-dark:#982736;
+//$color-yellow: #FFA732;
+$color-white: #fff;
+$color-black: #111;
+$color-white-hover: #efefef;
 
-$color-primary: $color-green;
-$color-secondary: $color-off-white;
-$color-shadow: #0f0f0f55;
+$color-primary: $c-green-1;
+$color-secondary: $color-white;
+//$color-shadow: #0f0f0f55;
 
 $radius-small: 4px;
 $radius-medium: 8px;
@@ -31,13 +123,25 @@ $padding-large: 12px;
 $font-color-primary: $color-primary;
 $font-color-secondary: $color-secondary;
 
-$shadow-small: 2px 2px 4px 0px $color-shadow;
+//$shadow-small: 2px 2px 4px 0px $color-shadow;
 
 $transition-normal: all .2s ease-in-out;
 
-$border-small: 1px solid $color-green;
+$border-small: 1px solid $color-primary;
 
-$font-size-small:12px;
-$font-size-medium:18px;
-$font-size-large:24px;
-$font-size-xxlarge:64px;
+$font-size-small: 12px;
+$font-size-medium: 18px;
+$font-size-large: 24px;
+$font-size-xxlarge: 64px;
+
+$shadow-normal: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+$shadow-hover: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+$shadow-active: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+
+$button-background: $color-secondary;
+$button-background-hover: $c-green-2;
+$button-background-active: $color-primary;
+
+$button-font: $color-primary;
+$button-font-hover: $font-color-secondary;
+$button-font-active: $font-color-secondary;
