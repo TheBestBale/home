@@ -19,6 +19,7 @@ export default {
     loadUsers() {
       console.log('loading users');
       adminGetUsers().then((u) => {
+        console.log("users", u);
         this.users = u;
         // this.users = u.concat(u);
       });
@@ -59,9 +60,9 @@ export default {
     <DevicesView :userID="selectedUserID"/>
   </div>
   <div v-else class="users">
-    <ShadowBox class="user" v-for="u in users" :key="u.rawId" @click="viewUserDevices(u.rawId)">
-      <div>{{ u.displayName }}</div>
-      <img class="profile-image" :src="u.photoUrl"/>
+    <ShadowBox class="user" v-for="u in users" :key="u.rawId" @click="viewUserDevices(u.ID)">
+      <div>{{ u.name }}</div>
+      <img class="profile-image" :src="u.image_url"/>
     </ShadowBox>
   </div>
 </template>

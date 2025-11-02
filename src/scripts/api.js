@@ -1,7 +1,7 @@
 // src/api.js
 import store from "@/scripts/store.js";
 
-const BASE_URL = "http://127.0.0.1:8081/api/me"; // http, not https
+const BASE_URL = "http://127.0.0.1:8081/api"; // http, not https
 
 async function request(method, path, body = null) {
     const token = store.GetAuthToken();
@@ -21,7 +21,7 @@ async function request(method, path, body = null) {
     }
     let url = `${BASE_URL}${path}`;
     console.log('sending request: ' + url);
-    console.log('sent token: ' + token);
+    // console.log('sent token: ' + token);
     const response = await fetch(url, options);
 
     if (!response.ok) {
@@ -34,11 +34,19 @@ async function request(method, path, body = null) {
 
 // Specific API helper functions
 export function getUser() {
+    console.log("getUser")
     return request("GET", "");
+}
+
+// Specific API helper functions
+export function currentUser() {
+    console.log("currentUser")
+    return request("GET", "/me");
 }
 
 // Add more as needed:
 export function getDevices() {
+    console.log("getDevices")
     return request("GET", "/devices");
 }
 

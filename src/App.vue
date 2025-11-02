@@ -19,7 +19,7 @@ import PageGallery from "@/assets/views/GalleryPage";
 import {onAuthStateChanged} from "firebase/auth";
 import {auth} from "@/scripts/firebase";
 import store from "@/scripts/store";
-import {getUser} from "@/scripts/api";
+import {currentUser} from "@/scripts/api";
 import HomePage from "@/assets/views/HomePage.vue";
 import AdminView from "@/assets/views/admin/AdminView.vue";
 
@@ -52,8 +52,8 @@ export default {
       };
     },
     loadUser() {
-      getUser().then((u) => {
-        // console.log('loaded user', u)
+      currentUser().then((u) => {
+        console.log('loaded user', u)
         store.SaveUser(u);
         this.user = u;
         // console.log(store.UserRole())
