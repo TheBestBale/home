@@ -17,9 +17,9 @@ export default {
   },
   methods: {
     loadUsers() {
-      console.log('loading users');
+      // console.log('loading users');
       adminGetUsers().then((u) => {
-        console.log("users", u);
+        // console.log("users", u);
         this.users = u;
         // this.users = u.concat(u);
       });
@@ -42,7 +42,7 @@ export default {
     watch(
         () => store.state.token,
         (newToken) => {
-          console.log('new token', newToken)
+          // console.log('new token', newToken)
           if (newToken !== null) {
             this.loadUsers();
           }
@@ -73,17 +73,21 @@ export default {
   display: flex;
   flex-direction: column;
   margin: auto;
-  padding: 24px;
+  //padding: 24px;
+  overflow: auto;
+  height: 100%;
 }
 
 .spacer {
   padding: 5px;
-  width: 800px;
+  width: 30%;
+  min-width: 550px;
   margin: 5px auto;
 }
 
 .users {
-  width: 800px;
+  width: 30%;
+  min-width: 550px;
   margin: auto;
   display: flex;
   flex-wrap: wrap;

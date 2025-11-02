@@ -23,7 +23,7 @@ export default {
     loadDevices() {
       if (this.userID !== null && this.userID !== undefined && !this.mine) {
         getUserDevices(this.userID).then((r) => {
-          console.log('getDevices Response: ', r)
+          // console.log('getDevices Response: ', r)
           this.devices = r;
         }).catch((e) => {
           console.error(e);
@@ -69,7 +69,7 @@ export default {
 <style scoped lang="scss">
 .device-list {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   overflow: auto;
 }
 </style>

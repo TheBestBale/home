@@ -13,7 +13,7 @@ export default {
   },
   mounted() {
     let usr = store.User();
-    console.log('usr', usr);
+    // console.log('usr', usr);
     if (usr) {
       this.selectedUserID = usr.uid?usr.uid:usr.rawId;
     }
@@ -21,7 +21,7 @@ export default {
     watch(
         () => store.state.token,
         (newToken) => {
-          console.log('new token', newToken)
+          // console.log('new token', newToken)
           if (newToken !== null) {
             let usr = store.User();
             this.selectedUserID = usr.uid;

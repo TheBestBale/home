@@ -22,7 +22,7 @@ async function request(method, path, body = null) {
         options.body = JSON.stringify(body);
     }
     let url = `${BASE_URL}${path}`;
-    console.log('sending admin request: ' + url);
+    // console.log('sending admin request: ' + url);
     // console.log('sent admin token: ' + token);
     const response = await fetch(url, options);
 

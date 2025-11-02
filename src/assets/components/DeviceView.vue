@@ -30,16 +30,16 @@ export default {
 
         // if (r.parsed_data?.PumpPos !== null){
         this.percentage = r.parsed_data?.PumpPos;
-        console.log('new percentage', this.percentage);
+        // console.log('new percentage', this.percentage);
         // }
       });
     }
   },
   computed: {
-    onlineClasses(){
+    onlineClasses() {
       return {
         'green': this.device.online,
-        'red':!this.device.online,
+        'red': !this.device.online,
       };
     },
     isLevelTrough() {
@@ -81,21 +81,15 @@ export default {
   <ShadowBox class="device">
     <!--{{ device}}-->
     <div class="header">
-      <div class="header-left">
+      <div class="header-top">
         <div>{{ device.Name }}</div>
-        <div
-            class="device-online tooltip"
-            :class="onlineClasses"
-            :title="`Online: ${device.online}`"
-        >
-        <span class="tooltiptext" :class="onlineClasses">{{ device.online ? 'Device Online' : 'Device Offline'}}</span>
+        <div class="device-online tooltip" :class="onlineClasses" :title="`Online: ${device.online}`">
+            <span class="tooltiptext" :class="onlineClasses">{{
+                device.online ? 'Device Online' : 'Device Offline'
+              }}</span>
         </div>
       </div>
-      <div class="header-right">
-
-        <div>ID: {{ device.ID }}</div>
-        <div>External ID: {{ device.ExternalID }}</div>
-      </div>
+      <div>ID: {{ device.ID }}</div>
     </div>
     <div class="body">
       <div class="left">
@@ -128,10 +122,11 @@ export default {
 
 <style scoped lang="scss">
 
-.green{
+.green {
   background-color: $c-green-3;
 }
-.red{
+
+.red {
   background-color: $c-red-1;
 }
 
@@ -196,7 +191,8 @@ export default {
 .device {
   //background-color: aqua;
   padding: 5px;
-  width: 800px;
+  width: 30%;
+  min-width: 500px;
   margin: 5px auto;
 
   &-online {
@@ -213,18 +209,12 @@ export default {
   justify-content: space-between;
   margin: 5px;
   border-bottom: 1px solid $c-grey;
+  flex-direction: column;
 
-  &-left {
+  &-top {
     font-size: 32px;
     display: flex;
   }
-
-  &-right {
-    display: flex;
-    flex-direction: column;
-  }
-
-
 }
 
 .body {

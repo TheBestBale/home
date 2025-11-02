@@ -53,7 +53,7 @@ export default {
     },
     loadUser() {
       currentUser().then((u) => {
-        console.log('loaded user', u)
+        // console.log('loaded user', u)
         store.SaveUser(u);
         this.user = u;
         // console.log(store.UserRole())

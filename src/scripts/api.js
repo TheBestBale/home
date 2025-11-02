@@ -34,19 +34,19 @@ async function request(method, path, body = null) {
 
 // Specific API helper functions
 export function getUser() {
-    console.log("getUser")
+    // console.log("getUser")
     return request("GET", "");
 }
 
 // Specific API helper functions
 export function currentUser() {
-    console.log("currentUser")
+    // console.log("currentUser")
     return request("GET", "/me");
 }
 
 // Add more as needed:
 export function getDevices() {
-    console.log("getDevices")
+    // console.log("getDevices")
     return request("GET", "/devices");
 }
 

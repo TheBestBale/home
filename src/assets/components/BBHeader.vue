@@ -41,7 +41,7 @@ export default {
       this.$emit('navigate', p);
     },
     classes(p) {
-      console.log('selected page', this.page);
+      // console.log('selected page', this.page);
       return {
         "header-nav": true,
         "selected": this.page === p,
