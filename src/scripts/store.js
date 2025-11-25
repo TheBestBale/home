@@ -25,7 +25,7 @@ const userRole = function () {
     if (!state.user) {
         return null;
     }
-    return state.user.role;
+    return state.user?.role?.name;
 }
 
 const currentUser = function () {

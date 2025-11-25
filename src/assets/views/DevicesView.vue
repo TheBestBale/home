@@ -17,14 +17,31 @@ export default {
     };
   },
   created() {
+    console.log('loading devices');
     this.loadDevices();
   },
   methods: {
     loadDevices() {
+      // console.log('UserID/mine', this.userID, this.mine);
       if (this.userID !== null && this.userID !== undefined && !this.mine) {
         getUserDevices(this.userID).then((r) => {
           // console.log('getDevices Response: ', r)
-          this.devices = r;
+
+          this.devices = r.map(device => {
+            // console.log("device", device);
+            // Filter and sort device functions for this device
+            const filteredFunctions = device.device_functions
+                .filter(f => f.name === 'GetWaterTroughData' || f.name === 'CheckWater')
+                .sort((a, b) => a.name.localeCompare(b.name));
+
+            // Return a new device object with updated functions
+            return {
+              ...device,
+              device_functions: filteredFunctions
+            };
+          });
+          console.log('modified Response', this.devices);
+
         }).catch((e) => {
           console.error(e);
         });
@@ -41,7 +58,7 @@ export default {
   computed: {
     sortedDevices() {
       let data = this.devices;
-      data.sort((a, b) => a.Name.localeCompare(b.Name));
+      data.sort((a, b) => a.name.localeCompare(b.name));
       return data
     }
   }

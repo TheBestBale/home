@@ -57,20 +57,6 @@ export default {
       }
       return 'N/A'
     },
-    allowedFunctions() {
-      let a = [];
-      let data = this.device.functions;
-      data.sort((a, b) => a.localeCompare(b));
-
-      for (const fs in data) {
-        let n = data[fs];
-        // todo figure out a better way for this?
-        if (n === 'GetWaterTroughData') {
-          a.push(n);
-        }
-      }
-      return a;
-    }
   }
 
 };
@@ -82,14 +68,14 @@ export default {
     <!--{{ device}}-->
     <div class="header">
       <div class="header-top">
-        <div>{{ device.Name }}</div>
+        <div>{{ device.name }}</div>
         <div class="device-online tooltip" :class="onlineClasses" :title="`Online: ${device.online}`">
             <span class="tooltiptext" :class="onlineClasses">{{
                 device.online ? 'Device Online' : 'Device Offline'
               }}</span>
         </div>
       </div>
-      <div>ID: {{ device.ID }}</div>
+      <div>ID: {{ device.id }}</div>
     </div>
     <div class="body">
       <div class="left">
@@ -99,12 +85,12 @@ export default {
         </div>
       </div>
       <div class="left">
-        <div>Created: {{ device.DateCreated }}</div>
+        <div>Created: {{ device.date_created }}</div>
         <div>Last Updated: {{ device.last_heard }}</div>
       </div>
     </div>
     <div class="functions">
-      <button class="button" @click="callFunction(f)" v-for="f in allowedFunctions" :key="f">{{ f }}</button>
+      <button class="button" @click="callFunction(f)" v-for="f in device.device_functions" :key="f">{{ f.name }}</button>
     </div>
     <WaterLevel v-if="isLevelTrough" :percentage="percentage"/>
 
